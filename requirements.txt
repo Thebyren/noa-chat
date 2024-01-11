@@ -1,0 +1,7 @@
+gtts
+pydub
+SpeechRecognition
+pyaudio
+llama-cpp-python==0.1.78
+huggingface_hub
+numpy==1.23.4
