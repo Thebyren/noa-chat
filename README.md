@@ -59,5 +59,12 @@ pip install -r requirements.txt
 python main.py
 ```
 
+>[!IMPORTANT]
+>en caso de error OSError: [WinError -1073741795] Windows Error 0xc000001d ejecutar esto:
+>```bash
+>set FORCE_CMAKE=1
+>set "CMAKE_ARGS=-DLLAMA_AVX2=off"
+>python -m pip install git+https://github.com/abetlen/llama-cpp-python@v0.1.77 --force-reinstall --no-deps
+>```
 
 
