@@ -9,7 +9,7 @@ un chat de voz interactiva en tiempo real
 
 >[!NOTE]
 >windows tiene que instalar visual studio con "Desarrollo de escritorio con C++"
->puede instalarlo con el siguiente link: https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030
+>puede instalarlo con el siguiente [link](https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030 'descarga Visual Studio 2022')
 
 ###paso 3 preparar el entorno para python y sus dependencias
 ```bash
