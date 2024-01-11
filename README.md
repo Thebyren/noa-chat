@@ -19,7 +19,7 @@ brew install python=3.11.7 python3-dev
 >windows tiene que instalar visual studio con "Desarrollo de escritorio con C++"
 >puede instalarlo con el siguiente [link](https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030 'descarga Visual Studio 2022')
 
-### paso 2 preparar el entorno para python y sus dependencias
+### paso 2 preparar el entorno para python
 1. preparar entorno de escririo
 ```bash
 python -m venv venv
@@ -40,5 +40,9 @@ venv\Scripts\Activate.ps1
 source venv/bin/activate
 ```
 
+### paso 3 instalar las dependencias
+```shell
+pip install -r requirements.txt
+```
 
 
