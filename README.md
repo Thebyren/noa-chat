@@ -26,7 +26,7 @@ python -m venv venv
 ```
 2. activar el entorno
 
-..* windows
+..*  windows
 cmd
 ```shell
 venv\Scripts\activate.bat
@@ -35,7 +35,7 @@ powershell
 ```shell
 venv\Scripts\Activate.ps1
 ```
-..* linux y MacOs
+..*  linux y MacOs
 ```shell
 source venv/bin/activate
 ```
