@@ -1,7 +1,7 @@
 # noa-chat
 un chat de voz interactiva en tiempo real
 ## instalacion
->[!primer paso]
+>[paso 1]
 >```bash
 >python -m venv venv
 >```
