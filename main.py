@@ -6,6 +6,7 @@ from pydub.playback import play
 from time import sleep
 import sys
 import speech_recognition as SR 
+import model
 
 r = SR.Recognizer()
 
@@ -53,7 +54,6 @@ async def escuchar_analizar():
         with SR.Microphone() as source:
             await async_animate_text('Ya puedes hablar', 0.01)
             audio = r.listen(source)
-
             try:
                 await async_animate_text('Analizando texto', 0.02)
                 text = r.recognize_google(audio, language='es-ES')
@@ -66,25 +66,18 @@ async def escuchar_analizar():
                 else:
                     try:
                         # leer lectura de voz. cambiar con la api de la ia
-                        tts = gTTS(text, lang='es')
+                        
+
+                        llm = model.load_model()
+                        response = model.query(text, llm)
+
+                        tts = gTTS(response, lang='es')
                         tts.save("output.mp3")
                         sound = AudioSegment.from_mp3("output.mp3")
-                        await asyncio.gather(async_animate_text(text), asyncio.to_thread(play_sound_threaded, sound))
+                        await asyncio.gather(async_animate_text(response),asyncio.to_thread(play_sound_threaded, sound))
                     except Exception as e:
                         print(e)
             except Exception as e:
                 print('Ocurrió un error', e)
 
 asyncio.run(escuchar_analizar())
-
-
-"""
-python -m spacy download es_core_news_sm
-import spacy
-nlp = spacy.load("es_core_news_sm")
-import es_core_news_sm
-nlp = es_core_news_sm.load()
-doc = nlp("Esto es una frase.")
-print([(w.text, w.pos_) for w in doc])
-
-"""
