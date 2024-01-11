@@ -45,4 +45,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### paso 4 ejecutar el programa
+```shell
+python main.py
+```
+
+
 
