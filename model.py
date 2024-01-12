@@ -20,12 +20,11 @@ def load_model():
 
 def query(prompt,lcpp_llm,SYSTEM_PROMPT='eres una asistente personal que que busca ayudar lo mejor posible'):
     prompt_template = f'''
-    SYSTEM: {SYSTEM_PROMPT}
-    USER: {prompt}
-    ASSISTANT:
+    Q:{prompt}.
+    A:
     '''
-    response=lcpp_llm(prompt=prompt_template, max_tokens=256, temperature=0.3, top_p=0.95,repeat_penalty=1.2, top_k=150)
-
+    response=lcpp_llm(prompt=prompt_template, max_tokens=256, temperature=0.5, top_p=0.95,
+                  repeat_penalty=1.2, top_k=150,)
     print(response['choices'][0]['text'])
     text_value = response.get('choices', [{}])[0].get('text', '')
     return text_value
