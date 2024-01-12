@@ -18,9 +18,9 @@ def load_model():
     )
     return lcpp_llm
 
-def query(prompt,lcpp_llm,SYSTEM_PROMPT='eres una asistente personal que que busca ayudar lo mejor posible'):
+def query(prompt,lcpp_llm):
     prompt_template = f'''
-    {prompt}
+    [INST] {prompt} [/INST]
     '''
     response=lcpp_llm(prompt=prompt_template, max_tokens=256, temperature=0.5, top_p=0.95,
                   repeat_penalty=1.2, top_k=150,)
