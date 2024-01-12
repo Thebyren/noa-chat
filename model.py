@@ -11,7 +11,7 @@ def down_model():
 def load_model():
     lcpp_llm = None
     lcpp_llm = Llama(
-        model_path='./model/llama-2-13b-chat.ggmlv3.q5_1.bin',
+        model_path='C:\Users\salaz\.cache\huggingface\hub\models--TheBloke--Llama-2-13B-chat-GGML\snapshots\3140827b4dfcb6b562cd87ee3d7f07109b014dd0\llama-2-13b-chat.ggmlv3.q5_1.bin', 
         n_threads=2,
         n_batch=512,
         n_gpu_layers=32
@@ -27,5 +27,3 @@ def query(prompt,lcpp_llm,SYSTEM_PROMPT='eres una asistente personal que que bus
     response=lcpp_llm(prompt=prompt_template, max_tokens=256, temperature=0.3, top_p=0.95,repeat_penalty=1.2, top_k=150)
 
     print(response('choices')[0]('text'))
-
-down_model()
