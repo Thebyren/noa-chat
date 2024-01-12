@@ -27,4 +27,5 @@ def query(prompt,lcpp_llm,SYSTEM_PROMPT='eres una asistente personal que que bus
     response=lcpp_llm(prompt=prompt_template, max_tokens=256, temperature=0.3, top_p=0.95,repeat_penalty=1.2, top_k=150)
 
     print(response['choices'][0]['text'])
-    return response
+    text_value = response.get('choices', [{}])[0].get('text', '')
+    return text_value
