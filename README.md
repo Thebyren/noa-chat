@@ -1,5 +1,5 @@
-# noa-chat
-un chat de voz interactiva en tiempo real
+![noa banner](./banner-noa.png)
+Controla tu entorno con comandos de voz, impulsados ​​por IA avanzada. Abre navegadores, administra archivos, busca documentos o incluso navega por la web solo con tu voz. Deja que el asistente hable con las API de voz de Google, mientras Llama 2 maneja respuestas, búsquedas y tareas inteligentes, todo en tiempo real.
 
 
 ## instalacion
