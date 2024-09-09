@@ -11,7 +11,7 @@ def down_model():
 def load_model():
     lcpp_llm = None
     lcpp_llm = Llama(
-        model_path='C:\\Users\\salaz\\.cache\\huggingface\\hub\\models--TheBloke--Llama-2-13B-chat-GGML\\snapshots\\3140827b4dfcb6b562cd87ee3d7f07109b014dd0\\llama-2-13b-chat.ggmlv3.q5_1.bin', 
+        model_path = hf_hub_download(repo_id=model_name_or_path, filename=model_basename)
         n_threads=2,
         n_batch=512,
         n_gpu_layers=32
